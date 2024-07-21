@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //dynamic number value
+let dynamicNumber = 50; // You can change this value dynamically if need be
+
+// Prompt the user to enter a number
+let userInput = prompt("Enter a number:");
+
+// Convert the user input to a number
+let userNumber = Number(userInput);
+
+// Check whether the user's number is greater than, equal to, or less than the dynamic number
+if (userNumber > dynamicNumber) {
+    alert("The number you entered is greater than " + dynamicNumber);
+} else if (userNumber === dynamicNumber) {
+    alert("The number you entered is equal to " + dynamicNumber);
+} else {
+    alert("The number you entered is less than " + dynamicNumber);
+}
+
+    </script>
+</body>
+</html>

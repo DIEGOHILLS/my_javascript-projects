@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Step 1: Create an array that contains the variables Rock, Paper, and Scissors
+let choices = ["Rock", "Paper", "Scissors"];
+
+// Step 2: Generate a random number 0-2 for the player and the computer
+let playerIndex = Math.floor(Math.random() * 3);
+let computerIndex = Math.floor(Math.random() * 3);
+
+// Step 3: Create a variable to hold a response message to the user
+let playerChoice = choices[playerIndex];
+let computerChoice = choices[computerIndex];
+let resultMessage = "";
+
+// Step 4: Create a condition to handle the player and computer selections (tie scenario)
+if (playerChoice === computerChoice) {
+    resultMessage = "It's a tie!";
+} else {
+    // Step 5: Apply game logic and return the correct results
+    if (
+        (playerChoice === "Rock" && computerChoice === "Scissors") ||
+        (playerChoice === "Paper" && computerChoice === "Rock") ||
+        (playerChoice === "Scissors" && computerChoice === "Paper")
+    ) {
+        resultMessage = "You win!";
+    } else {
+        resultMessage = "Computer wins!";
+    }
+}
+
+// Step 6: Add an output message that shows the player selection versus the computer selection and the result of the game
+console.log(`Player choice: ${playerChoice}`);
+console.log(`Computer choice: ${computerChoice}`);
+console.log(resultMessage);
+
+    </script>
+</body>
+</html>

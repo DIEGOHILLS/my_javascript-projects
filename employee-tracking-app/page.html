@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Step 1: Constructor function for creating a person with first name, last name, and years worked
+function Person(firstName, lastName, yearsWorked) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.yearsWorked = yearsWorked;
+}
+
+// Step 3: Set up a prototype to return the details of the person's first and last names and how long they've worked at the company
+Person.prototype.getDetails = function() {
+    return `${this.firstName} ${this.lastName} has worked here for ${this.yearsWorked} years.`;
+};
+
+// Step 2: Create two or more people and add them to an array
+let people = [
+    new Person('John', 'Doe', 5),
+    new Person('Jane', 'Smith', 3),
+    new Person('Alice', 'Johnson', 10)
+];
+
+// Step 4: Iterate the contents of the array to output the results into the console
+people.forEach(person => {
+    console.log(person.getDetails());
+});
+
+    </script>
+</body>
+</html>

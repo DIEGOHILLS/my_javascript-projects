@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Step 1: Create functions that output the values one and two to the console
+const outputOne = () => console.log(1);
+const outputTwo = () => console.log(2);
+
+// Step 2: Create a third function that outputs the value three to the console and then invokes the first two functions
+const outputThree = () => {
+    console.log(3);
+    outputOne();
+    outputTwo();
+};
+
+// Step 3: Create a fourth function that outputs the word four to the console and use setTimeout to invoke the first function immediately and then the third function
+const outputFour = () => {
+    console.log('four');
+    setTimeout(outputOne, 0); // Invoke outputOne immediately
+    outputThree();
+};
+
+// Test the functions
+outputOne();   // Outputs: 1
+outputTwo();   // Outputs: 2
+outputThree(); // Outputs: 3, 1, 2
+outputFour();  // Outputs: four, 3, 1, 2 (and then 1 from setTimeout)
+
+    </script>
+</body>
+</html>

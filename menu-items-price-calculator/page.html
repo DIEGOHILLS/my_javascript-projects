@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Order {
+    // Step 1: Private fields for item prices
+    #priceItem1 = 10; // Price for item 1
+    #priceItem2 = 15; // Price for item 2
+
+    // Step 2: Constructor to get the number of items being bought
+    constructor(quantityItem1, quantityItem2) {
+        this.quantityItem1 = quantityItem1;
+        this.quantityItem2 = quantityItem2;
+    }
+
+    // Step 3: Method to calculate the total cost
+    calculateTotalCost() {
+        return (this.quantityItem1 * this.#priceItem1) + (this.quantityItem2 * this.#priceItem2);
+    }
+
+    // Step 4: Getter to grab the value output by the calculation method
+    get totalCost() {
+        return this.calculateTotalCost();
+    }
+}
+
+// Step 5: Create two or three objects with different combinations of menu selections
+const order1 = new Order(2, 3); // 2 of item 1 and 3 of item 2
+const order2 = new Order(1, 1); // 1 of each item
+const order3 = new Order(5, 2); // 5 of item 1 and 2 of item 2
+
+// Output the total cost in the console
+console.log(`Total cost for order 1: $${order1.totalCost}`);
+console.log(`Total cost for order 2: $${order2.totalCost}`);
+console.log(`Total cost for order 3: $${order3.totalCost}`);
+
+    </script>
+</body>
+</html>
