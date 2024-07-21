@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let inventory = [];
+
+let item1 = { name: 'Laptop', model: 'X123', cost: 1000, quantity: 5 };
+let item2 = { name: 'Phone', model: 'P456', cost: 500, quantity: 10 };
+let item3 = { name: 'Tablet', model: 'T789', cost: 300, quantity: 8 };
+
+inventory.push(item1, item2, item3);
+console.log(inventory);
+
+console.log(inventory[2].quantity); // Logs the quantity of the third item (Tablet)
+
+let item4 = { name: 'Monitor', model: 'M012', cost: 150, quantity: 12 };
+inventory.push(item4);
+console.log(inventory);
+
+console.log(inventory[3].name); // Logs the name of the fourth item (Monitor)
+console.log(inventory[3].cost); // Logs the cost of the fourth item (Monitor)
+
+    </script>
+</body>
+</html>
